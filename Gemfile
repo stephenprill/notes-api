@@ -8,6 +8,8 @@ gem 'pg'
 
 gem 'faker', '~> 1.4.3'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 # Deleted ________________
 # Use SCSS for stylesheets
 # Use Uglifier as compressor for JavaScript assets
