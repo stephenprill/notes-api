@@ -9,6 +9,7 @@ gem 'pg'
 gem 'faker', '~> 1.4.3'
 
 gem 'rack-cors', :require => 'rack/cors'
+gem 'active_model_serializers', '~> 0.9.1'
 
 # Deleted ________________
 # Use SCSS for stylesheets
