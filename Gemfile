@@ -6,6 +6,8 @@ gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+gem 'faker', '~> 1.4.3'
+
 # Deleted ________________
 # Use SCSS for stylesheets
 # Use Uglifier as compressor for JavaScript assets
