@@ -2,25 +2,25 @@ class NotesController < ApplicationController
 
   def index
     @notes = Note.all
-    render json: @notes
+    render json: {notes: @notes}
   end
 
   def create
     @note = Note.new(notes_params)
     @note.save
     @notes = Note.all
-    render json: @notes
+    render json: {note: @note}
   end
 
   def show
     @note = Note.find(params[:id])
-    render json: @note
+    render json: {note: @note}
   end
 
   def update
     @note = Note.find(params[:id])
-    @note.update(params.require(:note).permit(:title, :body))
-    render json: @note
+    @note.update(notes_params)
+    render json: {note: @note}
   end
 
   def destroy
@@ -32,8 +32,5 @@ class NotesController < ApplicationController
   def notes_params
     params.require(:note).permit(:title, :body)
   end
-
-
-
 
 end
