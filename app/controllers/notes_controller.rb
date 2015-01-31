@@ -1,9 +1,12 @@
 class NotesController < ApplicationController
 
   def index
-    @notes = Note.all
-    render json: {notes: @notes}
+    render json: Note.all
   end
+  # def index
+  #   @notes = Note.all
+  #   render json: {notes: @notes}
+  # end
 
   def create
     @note = Note.new(notes_params)
